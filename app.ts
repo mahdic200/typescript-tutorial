@@ -1,31 +1,41 @@
-/* primitive */
+let str: any = 45;
+str = "mahdi"
+str = true
+str = {name: ""}
 
-/* strings */
-let myVar: any = 'string with single quotes';
-console.log(myVar, typeof myVar);
-myVar = "string with double quotes";
-console.log(myVar, typeof myVar);
+/* | in annotation */
+let m : string | null;
 
-/* numbers */
-myVar = 12;
-console.log(myVar, typeof myVar);
-myVar = 6.5;
-console.log(myVar, typeof myVar);
-myVar = -0.0000005;
-console.log(myVar, typeof myVar);
+let t: {
+    name: string;
+    age: number;
+    height: number;
+    isMarried: boolean;
+    account?: any;
+} = {
+    name: "mahdi",
+    age: 12,
+    height: 170,
+    isMarried: false
+}
 
-/* boolean */
-myVar = true;
-console.log(myVar, typeof myVar);
-myVar = false;
-console.log(myVar, typeof myVar);
+let array: (string | number)[];
+array = [1, 2, "mahdi", ""];
 
-/* null */
-myVar = null;
-console.log(myVar, typeof myVar);
+let array2: boolean[];
+array2 = [true, false, true, false]
 
-/* undefined */
-myVar = undefined;
-console.log(myVar, typeof myVar);
+let f: (name: (string | number)) => string = (name: string | number) => {
+    return `hello ${name}`;
+}
 
 
+let f2: (name: string, family: string, age: number) => string = (name: string) => {
+    return `hello ${name}`;
+}
+
+let f3: (...args: any) => void;
+
+f3 = (name, family, age) => {
+
+}
