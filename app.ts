@@ -29,3 +29,13 @@ myVar = undefined;
 console.log(myVar, typeof myVar);
 
 
+class Test {}
+
+/* none primitive */
+let test = new Test();
+console.log(test, typeof test)
+test = [1, 2]
+console.log(test, typeof test)
+function func() {}
+test = func
+console.log(test, typeof test)
