@@ -1,5 +1,18 @@
-# خلاصه جلسه ی مقدمه یا همون session00
-- نود جی اس (nodejs) روی نصب میکنیم
-- کامپایلر تایپ اسکریپت رو نصب میکنیم `npm install typescript -g`
-- با دستور های `tsc <tsFileName>` و `node <jsFileName>` میتونیم
-به ترتیب فایل های تایپ اسکریپت رو کامپایل و اجرا کنیم
+# session 1
+
+## all primitive types in typescript
+- string
+- number
+- boolean
+- null
+- undefined
+- symbol
+
+## all non primitive types in typescript
+- object types like:
+    - arrays
+    - functions
+    - classes
+
+# this session codes
+<a href="https://github.com/mahdic200/typescript-tutorial">repository address</a>
