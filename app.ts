@@ -1,26 +1,63 @@
-function raiseError(message: string) : never {
-    throw new Error(message);
+let employee : object;
+
+employee = {
+    firstName: '',
+    lastName: '',
+    age: 25,
+    jobTitle: ''
+};
+
+/* this code cause error */
+// employee = "this is my string"
+
+/* this code cause error */
+// console.log(employee.hireDate);
+
+
+let employee2: {
+    firstName: string;
+    lastName: string;
+    age: number;
+    jobTitle: string;
+};
+
+employee2 = {
+    firstName: "john",
+    lastName: "doe",
+    age: 21,
+    jobTitle: "web developer"
 }
 
-function reject() {
-    return raiseError("Rejected");
+
+/* or you can combine both syntaxes */
+let employee3: {
+    firstName: string;
+    lastName: string;
+    age: number;
+    jobTitle: string;
+} = {
+    firstName: "john",
+    lastName: "doe",
+    age: 21,
+    jobTitle: "web developer"
 }
 
-let loop = function forever() {
-    while (true) {
-        console.log("hello");
-    }
-}
-
-function fn(a: string | number) : boolean {
-    if (typeof a == "string") {
-        return true;
-    } else if (typeof a == "number") {
-        return false;
-    }
-
-    return raiseError("not a valid argument !");
-}
+let emp: {} = {};
 
 
-console.log(fn(true as unknown as string))
+let car: {
+    color: string;
+    material: string;
+    length: number;
+    gas: () => void;
+    boogh: () => void;
+};
+
+
+car = {
+    color: "blue",
+    material: "iron",
+    length: 2.5,
+    gas: () => {},
+    boogh: () => {},
+};
