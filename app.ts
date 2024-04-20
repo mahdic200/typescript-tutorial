@@ -1,14 +1,14 @@
-let arr: number[] = [12, 23, 45, 1, 8, 7];
+let skill: [string, number];
 
-// arr.push("mahdi")
+skill = ["Programmer", 1];
 
-
-let arr2: (number | string)[] = ['12', 12, 15, '15'];
-
-let strs: string[];
+// skill = [1, "Programmer"];
 
 
-let ns: number[];
+let color: [number, number, number, number?];
 
-let boolean: boolean[];
+color = [255, 0, 0, 0.1];
+
+
+
 
