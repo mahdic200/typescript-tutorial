@@ -1,14 +1,24 @@
-let skill: [string, number];
-
-skill = ["Programmer", 1];
-
-// skill = [1, "Programmer"];
+enum M {A,B,C,D};
 
 
-let color: [number, number, number, number?];
+enum Week {
+    sh,
+    ye,
+    do,
+    se,
+    cha,
+    pa,
+    jo
+}
 
-color = [255, 0, 0, 0.1];
 
+enum ApprovedStatus {
+    Approved = 3,
+    Suspended = 45,
+    Rejected = 15,
+}
+
+console.log("your value : ", ApprovedStatus)
 
 
 
