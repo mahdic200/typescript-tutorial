@@ -1,24 +1,66 @@
-enum M {A,B,C,D};
-
-
-enum Week {
-    sh,
-    ye,
-    do,
-    se,
-    cha,
-    pa,
-    jo
+interface Person {
+    readonly national_code: number;
+    firstName: string;
+    lastName: string;
+    age?: number;
 }
 
 
-enum ApprovedStatus {
-    Approved = 3,
-    Suspended = 45,
-    Rejected = 15,
+// function getFullName(person: {
+//     firstName: string;
+//     lastName: string;
+// }) {
+//     return `${person.firstName} ${person.lastName}`;
+// }
+function getFullName(person: Person) {
+    if (person.age) {
+        return `${person.firstName} ${person.lastName} ${person.age}`;
+    }
+    return `${person.firstName} ${person.lastName}`;
 }
 
-console.log("your value : ", ApprovedStatus)
+let person = {
+    firstName: 'john',
+    lastName: 'doe'
+}
+
+let jane = {
+    firstName: 'jane',
+    lastName: 'doe',
+    middleName: 'k',
+    age: 22
+}
+
+let person2: Person = {
+    national_code: 656846846,
+    firstName: "mahdi",
+    lastName: "yechizi",
+}
 
 
+// console.log(getFullName(person2));
 
+/* this code cause Error */
+// person2.national_code = 1315561;
+
+/* this is function type ! */
+interface StringFormat {
+    (str: string, isUpper: boolean): string;
+}
+
+let format: StringFormat = (str: string, isUpper: boolean): string => {
+    return isUpper ? str.toLocaleUpperCase() : str.toLocaleLowerCase();
+};
+
+console.log(format('hello world', true));
+
+
+interface Json {
+    toJson(): string;
+}
+
+class PersonClass implements Json {
+    toJson(): string {
+        return "";
+    }
+}
